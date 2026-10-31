@@ -1,0 +1,33 @@
+projectName: sparrowx
+environment: dev
+
+serviceName: billing-api
+
+replicaCount: 1
+
+appPort: 8000
+# extraAnnotations:
+# extraLabels:
+
+resources:
+  size: medium
+
+
+database:
+  enabled: true
+  name: billingdb
+  engine: postgres
+  port: 5432
+  host: billingdb-postgres.dev.sparrowx.internal
+
+
+servicemonitor:
+  enabled: true
+
+probePath: /health
+livenessProbe:
+  enabled: true
+readinessProbe:
+  enabled: true
+startupProbe:
+  enabled: true

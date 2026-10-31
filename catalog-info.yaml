@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: billing-api
+  description: billing-api backend API
+  annotations:
+    backstage.io/kubernetes-id: billing-api
+    github.com/project-slug: SparrowX-Labs/billing-api
+  tags:
+    - billing-api
+    - application
+    - backend
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:platform-team
